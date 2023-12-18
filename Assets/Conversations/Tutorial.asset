@@ -17,41 +17,218 @@ MonoBehaviour:
     <Guid>k__BackingField: b18e9d69-1aa7-4620-a99b-394555a9a818
     <NodeRect>k__BackingField:
       serializedVersion: 2
-      x: 99
-      y: -371
+      x: 102
+      y: -384
       width: 87
       height: 40
     name: Start
   nodes:
-  - rid: 4121991454285365248
+  - rid: 4121991454285365296
+  - rid: 4121991454285365297
+  - rid: 4121991454285365298
+  - rid: 4121991454285365299
+  - rid: 4121991454285365300
+  - rid: 4121991454285365301
+  - rid: 4121991454285365302
+  - rid: 4121991454285365303
   edges:
-  - rid: 4121991454285365249
+  - rid: 4121991454285365304
+  - rid: 4121991454285365305
+  - rid: 4121991454285365306
+  - rid: 4121991454285365307
+  - rid: 4121991454285365308
+  - rid: 4121991454285365309
+  - rid: 4121991454285365310
+  - rid: 4121991454285365311
   properties: []
   stickyNotes: []
   groups: []
   references:
     version: 2
     RefIds:
-    - rid: 4121991454285365248
+    - rid: 4121991454285365296
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
-        <Guid>k__BackingField: f1365d44-bbe8-48e9-be23-368f5b8fc7e4
+        <Guid>k__BackingField: c7aa9115-132a-478c-a99d-5042fa8a7b2c
         <NodeRect>k__BackingField:
           serializedVersion: 2
-          x: 248
-          y: -408
+          x: 315
+          y: -426
+          width: 208
+          height: 148
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: f4578873271e5f44f9f7c387fe3daf9e, type: 2}
+        useActorProfile: 1
+        message: Well, well, well, look who's stumbled into this place!
+    - rid: 4121991454285365297
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: e82768f8-f39a-463d-b466-3531c29e59f0
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 594
+          y: -426
           width: 208
           height: 133
         actor: Actor name
         actorProfile: {fileID: 11400000, guid: f4578873271e5f44f9f7c387fe3daf9e, type: 2}
         useActorProfile: 1
-        message: Hello Loser!
-    - rid: 4121991454285365249
+        message: No friends? Surprise, surprise!
+    - rid: 4121991454285365298
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 840bc81c-57a7-4539-a2e0-071c8555dcc1
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 891
+          y: -426
+          width: 208
+          height: 162
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: f4578873271e5f44f9f7c387fe3daf9e, type: 2}
+        useActorProfile: 1
+        message: You're stuck here until you make some pals, so brace yourself!
+    - rid: 4121991454285365299
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 46fb6381-9e62-40b9-86cc-6d07a34b1661
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1191
+          y: -426
+          width: 208
+          height: 133
+        actor: Use WASD to drag yourself around. Good luck with those tiny legs.
+        actorProfile: {fileID: 11400000, guid: f4578873271e5f44f9f7c387fe3daf9e, type: 2}
+        useActorProfile: 1
+        message: Use WASD to drag yourself around. Good luck with those tiny legs.
+    - rid: 4121991454285365300
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: c3bc1041-0207-4c68-b5c3-692f43d1c975
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1483
+          y: -426
+          width: 208
+          height: 133
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: f4578873271e5f44f9f7c387fe3daf9e, type: 2}
+        useActorProfile: 1
+        message: To win favor, chat people up and hope you don't mess it up.
+    - rid: 4121991454285365301
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: f61af891-c981-4296-836b-15645d9a5622
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1794
+          y: -426
+          width: 208
+          height: 133
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: f4578873271e5f44f9f7c387fe3daf9e, type: 2}
+        useActorProfile: 1
+        message: 'There are two ways to crawl out of this mess: say the right things
+          or struggle through patheic mini-games.'
+    - rid: 4121991454285365302
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 87e87a6f-77be-4d61-b0b2-f902872251d2
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2084
+          y: -426
+          width: 208
+          height: 133
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: f4578873271e5f44f9f7c387fe3daf9e, type: 2}
+        useActorProfile: 1
+        message: Gather four items by pandering to either side of these folks, and
+          maybe, just maybe, you'll get out.
+    - rid: 4121991454285365303
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 085bde0f-e20e-4a4e-b6e0-87aac983711c
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 2367
+          y: -426
+          width: 208
+          height: 133
+        actor: Actor name
+        actorProfile: {fileID: 11400000, guid: f4578873271e5f44f9f7c387fe3daf9e, type: 2}
+        useActorProfile: 1
+        message: Don't get your hopes up. You'll need all the luck you can muster.
+    - rid: 4121991454285365304
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
           node: b18e9d69-1aa7-4620-a99b-394555a9a818
           port: next
         input:
-          node: f1365d44-bbe8-48e9-be23-368f5b8fc7e4
+          node: c7aa9115-132a-478c-a99d-5042fa8a7b2c
+          port: previous
+    - rid: 4121991454285365305
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c7aa9115-132a-478c-a99d-5042fa8a7b2c
+          port: next
+        input:
+          node: e82768f8-f39a-463d-b466-3531c29e59f0
+          port: previous
+    - rid: 4121991454285365306
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: e82768f8-f39a-463d-b466-3531c29e59f0
+          port: next
+        input:
+          node: 840bc81c-57a7-4539-a2e0-071c8555dcc1
+          port: previous
+    - rid: 4121991454285365307
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 840bc81c-57a7-4539-a2e0-071c8555dcc1
+          port: next
+        input:
+          node: 46fb6381-9e62-40b9-86cc-6d07a34b1661
+          port: previous
+    - rid: 4121991454285365308
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 46fb6381-9e62-40b9-86cc-6d07a34b1661
+          port: next
+        input:
+          node: c3bc1041-0207-4c68-b5c3-692f43d1c975
+          port: previous
+    - rid: 4121991454285365309
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c3bc1041-0207-4c68-b5c3-692f43d1c975
+          port: next
+        input:
+          node: f61af891-c981-4296-836b-15645d9a5622
+          port: previous
+    - rid: 4121991454285365310
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: f61af891-c981-4296-836b-15645d9a5622
+          port: next
+        input:
+          node: 87e87a6f-77be-4d61-b0b2-f902872251d2
+          port: previous
+    - rid: 4121991454285365311
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 87e87a6f-77be-4d61-b0b2-f902872251d2
+          port: next
+        input:
+          node: 085bde0f-e20e-4a4e-b6e0-87aac983711c
           port: previous

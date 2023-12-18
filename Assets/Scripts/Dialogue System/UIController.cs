@@ -7,17 +7,17 @@ using TMPro;
 public class UIController : MonoBehaviour
 {
     [SerializeField] private GameObject messageWindow;
-    //[SerializeField] private GameObject choiceWindow;
+    [SerializeField] private GameObject choiceWindow;
     [SerializeField] private TextMeshProUGUI actorNameText;
     [SerializeField] private TextMeshProUGUI messageText;
     [SerializeField] private Button nextMessageButton;
     [SerializeField] private GameObject dialogueSystem;
 
-    //[SerializeField] private GameObject choiceOptionButtonPrefab;
+    [SerializeField] private GameObject choiceOptionButtonPrefab;
 
     public void ShowMessage(string actor, string message, Sprite avatar, Action onContinue)
     {
-        //choiceWindow.SetActive(false);
+        choiceWindow.SetActive(false);
         messageWindow.SetActive(true);
 
         actorNameText.text = actor;
@@ -27,12 +27,11 @@ public class UIController : MonoBehaviour
         nextMessageButton.onClick.RemoveAllListeners();
         nextMessageButton.onClick.AddListener(() => onContinue());
     }
-    /*
+    
     public void ShowChoice(string actor, string message, Sprite avatar, List<Option> options)
     {
         messageWindow.SetActive(true);
-
-        UpdateImage(avatar);
+        
         actorNameText.text = actor;
         messageText.text = message;
         nextMessageButton.enabled = false;
@@ -46,15 +45,19 @@ public class UIController : MonoBehaviour
         {
             var instance = Instantiate(choiceOptionButtonPrefab, Vector3.zero, Quaternion.identity);
             instance.transform.SetParent(choiceWindow.transform);
-            instance.GetComponentInChildren<Text>().text = option.Message;
+            instance.GetComponentInChildren<TextMeshProUGUI>().text = option.Message;
             instance.GetComponent<Button>().onClick.AddListener(() => option.Advance());
         });
-    }*/
-    
+    }
+
+    public void Show()
+    {
+        dialogueSystem.SetActive(true);
+    }
     public void Hide()
     {
         dialogueSystem.SetActive(false);
         messageWindow.SetActive(false);
-        //choiceWindow.SetActive(false);
+        choiceWindow.SetActive(false);
     }
 }

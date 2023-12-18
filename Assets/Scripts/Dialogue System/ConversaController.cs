@@ -13,13 +13,20 @@ public class ConversaController : MonoBehaviour
 	[SerializeField] private Button startDialogueButton;
 
 	private ConversationRunner runner;
-	private string savepointGuid = string.Empty;
 
 	private void Start()
 	{
 		runner = new ConversationRunner(conversation);
 		runner.OnConversationEvent.AddListener(HandleConversationEvent);
-		startDialogueButton.onClick.AddListener(HandleRestartConversation);
+		// Change to Interaction
+		// startDialogueButton.onClick.AddListener(HandleStartConversation);
+		// startDialogueButton.onClick.AddListener(uiController.Show);
+
+		if (conversation.name == "Tutorial")
+		{
+			HandleStartConversation();
+			uiController.Show();
+		}
 	}
 
 	private void HandleConversationEvent(IConversationEvent e)
@@ -29,8 +36,8 @@ public class ConversaController : MonoBehaviour
 			case MessageEvent messageEvent:
 				HandleMessage(messageEvent);
 				break;
-		//	case ChoiceEvent choiceEvent:
-		//		HandleChoice(choiceEvent);
+			case ChoiceEvent choiceEvent:
+				HandleChoice(choiceEvent);
 				break;
 			case ActorMessageEvent actorMessageEvent:
 				HandleActorMessageEvent(actorMessageEvent);
@@ -60,15 +67,15 @@ public class ConversaController : MonoBehaviour
 	private void HandleActorChoiceEvent(ActorChoiceEvent evt)
 	{
 		var actorDisplayName = evt.Actor == null ? "" : evt.Actor.DisplayName;
-		/*if (evt.Actor is AvatarActor avatarActor)
+		if (evt.Actor is AvatarActor avatarActor)
 			uiController.ShowChoice(actorDisplayName, evt.Message, avatarActor.Avatar, evt.Options);
 		else
-			uiController.ShowChoice(actorDisplayName, evt.Message, null, evt.Options);*/
+			uiController.ShowChoice(actorDisplayName, evt.Message, null, evt.Options);
 	}
 
 	private void HandleMessage(MessageEvent e) => uiController.ShowMessage(e.Actor, e.Message, null, () => e.Advance());
 
-	//private void HandleChoice(ChoiceEvent e) => uiController.ShowChoice(e.Actor, e.Message, null, e.Options);
+	private void HandleChoice(ChoiceEvent e) => uiController.ShowChoice(e.Actor, e.Message, null, e.Options);
 
 	private static void HandleUserEvent(UserEvent userEvent)
 	{
@@ -76,19 +83,9 @@ public class ConversaController : MonoBehaviour
 			Debug.Log("We can use this event to update the inventory, for instance");
 	}
 
-	private void HandleRestartConversation()
+	private void HandleStartConversation()
 	{
 		runner.Begin();
-	}
-
-	private void HandleLoadSavepoint()
-	{
-		runner.BeginByGuid(savepointGuid);
-	}
-
-	private void HandleUpdateSavepoint()
-	{
-		savepointGuid = runner.CurrentNodeGuid;
 	}
 
 	private void HandleEnd()
