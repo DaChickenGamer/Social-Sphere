@@ -17,36 +17,36 @@ MonoBehaviour:
     <Guid>k__BackingField: b18e9d69-1aa7-4620-a99b-394555a9a818
     <NodeRect>k__BackingField:
       serializedVersion: 2
-      x: 91
-      y: -312
+      x: 99
+      y: -371
       width: 87
       height: 40
     name: Start
   nodes:
-  - rid: 6475630232386404399
+  - rid: 4121991454285365248
   edges:
-  - rid: 6475630232386404400
+  - rid: 4121991454285365249
   properties: []
   stickyNotes: []
   groups: []
   references:
     version: 2
     RefIds:
-    - rid: 6475630232386404399
+    - rid: 4121991454285365248
       type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
       data:
         <Guid>k__BackingField: f1365d44-bbe8-48e9-be23-368f5b8fc7e4
         <NodeRect>k__BackingField:
           serializedVersion: 2
-          x: 230
-          y: -371
+          x: 248
+          y: -408
           width: 208
           height: 133
         actor: Actor name
         actorProfile: {fileID: 11400000, guid: f4578873271e5f44f9f7c387fe3daf9e, type: 2}
         useActorProfile: 1
         message: Hello Loser!
-    - rid: 6475630232386404400
+    - rid: 4121991454285365249
       type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
       data:
         output:
