@@ -10,7 +10,7 @@ public class PlantWateringManager : MonoBehaviour
     
     [SerializeField] private bool generatePlants;
     private int maxPlantCount = 5;
-
+    
     private float platformMaxX;
     private float platformMinX;
     private float platformMiddleY;
@@ -31,7 +31,7 @@ public class PlantWateringManager : MonoBehaviour
             for (int i = 0; i < maxPlantCount; i++)
             {
                 // Needs to account for size of the object
-                Instantiate(plantPrefab, new Vector3(((((platformMaxX - platformMinX) )/maxPlantCount) * i) + platformMinX, platformMiddleY , 0), Quaternion.identity);
+                Instantiate(plantPrefab, new Vector3(((((platformMaxX - platformMinX) )/maxPlantCount) * i) + platformMinX, platformMiddleY, 0), Quaternion.identity);
             }
             generatePlants = false;
         }
