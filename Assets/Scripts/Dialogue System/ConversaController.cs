@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ConversaController : MonoBehaviour
 {
-	[SerializeField] private Conversation conversation;
+	public Conversation conversation;
 	[SerializeField] private UIController uiController;
 	
 	[SerializeField] private Button startDialogueButton;
@@ -58,10 +58,7 @@ public class ConversaController : MonoBehaviour
 	{
 		
 		var actorDisplayName = evt.Actor == null ? "" : evt.Actor.DisplayName;
-		if (evt.Actor is AvatarActor avatarActor)
-			uiController.ShowMessage(actorDisplayName, evt.Message, avatarActor.Avatar, evt.Advance);
-		else
-			uiController.ShowMessage(actorDisplayName, evt.Message, null, evt.Advance);
+		uiController.ShowMessage(actorDisplayName, evt.Message, evt.Advance);
 	}
 
 	private void HandleActorChoiceEvent(ActorChoiceEvent evt)
@@ -73,7 +70,7 @@ public class ConversaController : MonoBehaviour
 			uiController.ShowChoice(actorDisplayName, evt.Message, null, evt.Options);
 	}
 
-	private void HandleMessage(MessageEvent e) => uiController.ShowMessage(e.Actor, e.Message, null, () => e.Advance());
+	private void HandleMessage(MessageEvent e) => uiController.ShowMessage(e.Actor, e.Message, () => e.Advance());
 
 	private void HandleChoice(ChoiceEvent e) => uiController.ShowChoice(e.Actor, e.Message, null, e.Options);
 

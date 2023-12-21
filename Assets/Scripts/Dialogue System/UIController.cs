@@ -15,7 +15,7 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private GameObject choiceOptionButtonPrefab;
 
-    public void ShowMessage(string actor, string message, Sprite avatar, Action onContinue)
+    public void ShowMessage(string actor, string message, Action onContinue)
     {
         choiceWindow.SetActive(false);
         messageWindow.SetActive(true);
