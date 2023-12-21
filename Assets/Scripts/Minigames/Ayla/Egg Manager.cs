@@ -15,6 +15,7 @@ public class EggManager : MonoBehaviour
 
     public bool eggHuntStarted = false;
     private bool _isTimerStarted;
+    private bool _isTimerOver;
     
     public TextMeshProUGUI timerText;
 
@@ -32,7 +33,7 @@ public class EggManager : MonoBehaviour
     private void Start()
     {
         eggLocations = new List<Vector3>();
-        
+        eggsCollected = 0;
         Collider2D eggPlatformCollider = eggPlatform.GetComponent<Collider2D>();
 
         minX = eggPlatformCollider.bounds.min.x;
@@ -64,7 +65,7 @@ public class EggManager : MonoBehaviour
         {
             eggsGenerated = true;
         }
-        if (eggsCollected == 10 || (countdownTime <= 0 && _isTimerStarted))
+        if (eggsCollected == 10 || _isTimerOver)
         {
             loseCondition = true;
             timerUI.SetActive(false);
@@ -110,6 +111,10 @@ public class EggManager : MonoBehaviour
         {
             countdownTime -= Time.deltaTime;
             timerText.text = ((int)countdownTime).ToString();
+        }
+        else
+        {
+            _isTimerOver = true;
         }
     }
 }

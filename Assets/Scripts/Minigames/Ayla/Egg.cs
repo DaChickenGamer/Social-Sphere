@@ -10,9 +10,17 @@ public class Egg : MonoBehaviour
 
     private Collider2D playerCollider;
     public GameObject eggManager;
+
+    private EggManager _eggManager;
+
+    private void Start()
+    {
+        _eggManager = FindObjectOfType<EggManager>();
+    }
+
     private void Update()
     {
-        if (eggManager.GetComponent<EggManager>().loseCondition)
+        if (_eggManager.loseCondition)
             Destroy(gameObject);
         if (playerEntered && isInteracting == false)
         {
@@ -20,7 +28,7 @@ public class Egg : MonoBehaviour
         }
         else if (playerEntered && isInteracting)
         { 
-            eggManager.GetComponent<EggManager>().eggsCollected++;
+            _eggManager.eggsCollected++;
             Destroy(gameObject);
         }
     }
