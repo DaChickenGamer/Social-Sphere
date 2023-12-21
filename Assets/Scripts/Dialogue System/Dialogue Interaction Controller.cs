@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Conversa.Runtime;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,18 +9,23 @@ using UnityEngine;
 public class DialogueInteractionController : MonoBehaviour
 {
     private bool playerEntered;
-    private Character character;
+    public Character character;
 
-    private ConversaController conversaController;
+    private ConversaController _conversaController;
+    private PlayerInteraction _playerInteraction;
+    
     private void Start()
     {
-        conversaController = FindObjectOfType<ConversaController>();
-        
-        List<Character> characters = new List<Character>(Resources.LoadAll<Character>("Characters"));
-        
-        foreach (Character character in characters)
+        _conversaController = FindObjectOfType<ConversaController>();
+        _playerInteraction = FindObjectOfType<PlayerInteraction>();
+    }
+
+    private void Update()
+    {
+        if (playerEntered && _playerInteraction.GetIsInteracting())
         {
-           Debug.Log(character.characterName);
+            _conversaController.conversation = character.characterConversation;
+            _conversaController.HandleStartConversation();
         }
     }
 
@@ -35,29 +41,6 @@ public class DialogueInteractionController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerEntered = false;
-        }
-    }
-
-    private void CheckForNpcName()
-    {
-        switch (gameObject.name)
-        {
-            case "Yeva":
-                break;
-            case "Kris":
-                break;
-            case "Rita":
-                break;
-            case "Ilona":
-                break;
-            case "Jessi":
-                break;
-            case "Ayla":
-                break;
-            case "Thomas":
-                break;
-            case "Sarah":
-                break;
         }
     }
 }

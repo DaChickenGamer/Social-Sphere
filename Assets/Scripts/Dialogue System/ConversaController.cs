@@ -25,7 +25,6 @@ public class ConversaController : MonoBehaviour
 		if (conversation.name == "Tutorial")
 		{
 			HandleStartConversation();
-			uiController.Show();
 		}
 	}
 
@@ -80,9 +79,10 @@ public class ConversaController : MonoBehaviour
 			Debug.Log("We can use this event to update the inventory, for instance");
 	}
 
-	private void HandleStartConversation()
+	public void HandleStartConversation()
 	{
 		runner.Begin();
+		uiController.Show();
 	}
 
 	private void HandleEnd()
