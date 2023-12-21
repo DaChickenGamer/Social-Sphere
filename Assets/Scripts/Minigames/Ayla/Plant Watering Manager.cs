@@ -7,9 +7,15 @@ public class PlantWateringManager : MonoBehaviour
 {
     public GameObject plantSpawningPlatform;
     public GameObject plantPrefab;
+
+    public Sprite wateringCanSprite;
     
+    public bool plantWateringStarted = false;
     [SerializeField] private bool generatePlants;
     private int maxPlantCount = 5;
+    public int plantsWatered;
+
+    private PlayerInventory playerInventory;
     
     private float platformMaxX;
     private float platformMinX;
@@ -17,7 +23,10 @@ public class PlantWateringManager : MonoBehaviour
 
     private void Start()
     {
+        plantsWatered = 0;
         Collider2D plantCollider = plantSpawningPlatform.GetComponent<Collider2D>();
+        
+        playerInventory = FindObjectOfType<PlayerInventory>();
         
         platformMaxX = plantCollider.bounds.max.x;
         platformMinX = plantCollider.bounds.min.x;
@@ -34,6 +43,11 @@ public class PlantWateringManager : MonoBehaviour
                 Instantiate(plantPrefab, new Vector3(((((platformMaxX - platformMinX) )/maxPlantCount) * i) + platformMinX, platformMiddleY, 0), Quaternion.identity);
             }
             generatePlants = false;
+        }
+
+        if (plantWateringStarted)
+        {
+            playerInventory.AddToInventory(wateringCanSprite);
         }
     }
 }
