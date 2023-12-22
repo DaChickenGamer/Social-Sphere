@@ -18,9 +18,18 @@ public class FavorabilityController : MonoBehaviour
     private void Start()
     {
         Debug.Log(_favorabilityDictionary.Count);
+        foreach (var key in _favorabilityDictionary)
+        {
+            Debug.Log(key.Key + " : " + key.Value);
+        }
     }
 
-    private void Update()
+    public void AddFavorability(string characterName, float favorability)
     {
+        _favorabilityDictionary[characterName] += favorability;
+    }
+    public void RemoveFavorability(string characterName, float favorability)
+    {
+        _favorabilityDictionary[characterName] -= favorability;
     }
 }
