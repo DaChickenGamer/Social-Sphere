@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e373d802544f3b90f235c7efebe5e1, type: 3}
+  m_Name: Dev Notes
+  m_EditorClassIdentifier: 
+  version: 1.0
+  startNode:
+    <Guid>k__BackingField: b3d0a158-4ee0-44f7-abb7-1d3a753b4891
+    <NodeRect>k__BackingField:
+      serializedVersion: 2
+      x: 136
+      y: 108
+      width: 87
+      height: 40
+    name: Start
+  nodes:
+  - rid: 4121991542911008782
+  - rid: 4121991542911008783
+  - rid: 4121991542911008784
+  - rid: 4121991542911008785
+  - rid: 4121991542911008786
+  - rid: 4121991542911008787
+  - rid: 4121991542911008788
+  edges:
+  - rid: 4121991542911008789
+  - rid: 4121991542911008790
+  - rid: 4121991542911008791
+  - rid: 4121991542911008792
+  - rid: 4121991542911008793
+  - rid: 4121991542911008794
+  - rid: 4121991542911008795
+  properties: []
+  stickyNotes: []
+  groups: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4121991542911008782
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 428d47bc-525b-46f7-bfae-0c5c7d6459ba
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 285
+          y: 74
+          width: 208
+          height: 133
+        actor: Dev
+        actorProfile: {fileID: 0}
+        useActorProfile: 0
+        message: Hello, sorry for my ghostly form. This game got me this way.
+    - rid: 4121991542911008783
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: c3a45209-1855-40c7-aa07-c3b5bf28d487
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 563
+          y: 74
+          width: 208
+          height: 191
+        actor: Dev
+        actorProfile: {fileID: 0}
+        useActorProfile: 0
+        message: I just wanted to review this project. TDLR I didn't have time so
+          not much was done. I'll go more in depth but that was the brief descirpiton.
+    - rid: 4121991542911008784
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: bd779e2c-5961-4557-bd10-fecf0584a532
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 852
+          y: 74
+          width: 208
+          height: 177
+        actor: Dev
+        actorProfile: {fileID: 0}
+        useActorProfile: 0
+        message: Okay, let's get right into it. I have been busy but I have planned
+          out a lot of the game that I want to show you.
+    - rid: 4121991542911008785
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: a10e072f-9143-4899-87fa-3fae05528916
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1124
+          y: 74
+          width: 208
+          height: 133
+        actor: Dev
+        actorProfile: {fileID: 0}
+        useActorProfile: 0
+        message: I have spent a lot of time getting this dialogue system to work
+          with the favorability system I made.
+    - rid: 4121991542911008786
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 7a1de0fd-038a-4554-a0c3-6d18d72ed01a
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1425
+          y: 74
+          width: 208
+          height: 133
+        actor: Dev
+        actorProfile: {fileID: 0}
+        useActorProfile: 0
+        message: The game was supposed to be where you talk to eight different npcs
+          and play their minigames and talk to them. There was a good and evil side
+          and you'd have to choose one to buddy up to escape the world.
+    - rid: 4121991542911008787
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 19eb94f8-b3b8-4af0-9cd4-8cc5ee9a3697
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1707
+          y: 74
+          width: 208
+          height: 191
+        actor: Dev
+        actorProfile: {fileID: 0}
+        useActorProfile: 0
+        message: I tried to adapt their personailites to dialogue and the minigames
+          to their traits. You'll have to wait to see them but I think it'll be a
+          fun wait.
+    - rid: 4121991542911008788
+      type: {class: MessageNode, ns: Conversa.Runtime.Nodes, asm: Conversa.Runtime}
+      data:
+        <Guid>k__BackingField: 3bfa665a-d184-4de3-bb92-af25a2d51ebf
+        <NodeRect>k__BackingField:
+          serializedVersion: 2
+          x: 1966
+          y: 74
+          width: 208
+          height: 220
+        actor: Dev
+        actorProfile: {fileID: 0}
+        useActorProfile: 0
+        message: Overall, I'm sorry about the lack of a game but I definintly want
+          to followup on this project and show you the ideas I have. I don't want
+          to spoil anything so I'll keep this short but this game will be fun.
+    - rid: 4121991542911008789
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: b3d0a158-4ee0-44f7-abb7-1d3a753b4891
+          port: next
+        input:
+          node: 428d47bc-525b-46f7-bfae-0c5c7d6459ba
+          port: previous
+    - rid: 4121991542911008790
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 428d47bc-525b-46f7-bfae-0c5c7d6459ba
+          port: next
+        input:
+          node: c3a45209-1855-40c7-aa07-c3b5bf28d487
+          port: previous
+    - rid: 4121991542911008791
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: c3a45209-1855-40c7-aa07-c3b5bf28d487
+          port: next
+        input:
+          node: bd779e2c-5961-4557-bd10-fecf0584a532
+          port: previous
+    - rid: 4121991542911008792
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: bd779e2c-5961-4557-bd10-fecf0584a532
+          port: next
+        input:
+          node: a10e072f-9143-4899-87fa-3fae05528916
+          port: previous
+    - rid: 4121991542911008793
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: a10e072f-9143-4899-87fa-3fae05528916
+          port: next
+        input:
+          node: 7a1de0fd-038a-4554-a0c3-6d18d72ed01a
+          port: previous
+    - rid: 4121991542911008794
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 7a1de0fd-038a-4554-a0c3-6d18d72ed01a
+          port: next
+        input:
+          node: 19eb94f8-b3b8-4af0-9cd4-8cc5ee9a3697
+          port: previous
+    - rid: 4121991542911008795
+      type: {class: EdgeData, ns: Conversa.Runtime, asm: Conversa.Runtime}
+      data:
+        output:
+          node: 19eb94f8-b3b8-4af0-9cd4-8cc5ee9a3697
+          port: next
+        input:
+          node: 3bfa665a-d184-4de3-bb92-af25a2d51ebf
+          port: previous

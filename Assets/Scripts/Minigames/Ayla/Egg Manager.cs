@@ -29,12 +29,16 @@ public class EggManager : MonoBehaviour
     private float minX, minY, maxX, maxY;
 
     private List<Vector3> eggLocations;
+
+    [SerializeField] private TextMeshProUGUI _eggCountUI;
     
     private void Start()
     {
         eggLocations = new List<Vector3>();
         eggsCollected = 0;
         Collider2D eggPlatformCollider = eggPlatform.GetComponent<Collider2D>();
+        
+        _eggCountUI.gameObject.SetActive(false);
 
         minX = eggPlatformCollider.bounds.min.x;
         maxX = eggPlatformCollider.bounds.max.x;
@@ -45,6 +49,8 @@ public class EggManager : MonoBehaviour
     
     private void Update()
     {
+        _eggCountUI.text = eggsCollected.ToString() + " / 10 Eggs";
+        
         EggGameConditions();
     }
 
@@ -54,6 +60,7 @@ public class EggManager : MonoBehaviour
             Timer();
         if (_isTimerStarted == false && eggsGenerated)
         {
+            _eggCountUI.gameObject.SetActive(true);
             timerUI.SetActive(true);
             _isTimerStarted = true;
         }
@@ -100,7 +107,7 @@ public class EggManager : MonoBehaviour
         }
     }
 
-    private int totalTime = 30;
+    private int totalTime = 90;
     private float countdownTime = -1;
 
     private void Timer()

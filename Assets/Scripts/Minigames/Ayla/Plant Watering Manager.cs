@@ -15,6 +15,8 @@ public class PlantWateringManager : MonoBehaviour
     private int maxPlantCount = 5;
     public int plantsWatered;
 
+    private bool firstGeneration;
+    
     private PlayerInventory playerInventory;
     
     private float platformMaxX;
@@ -26,6 +28,8 @@ public class PlantWateringManager : MonoBehaviour
         plantsWatered = 0;
         Collider2D plantCollider = plantSpawningPlatform.GetComponent<Collider2D>();
         
+        firstGeneration = true;
+        
         playerInventory = FindObjectOfType<PlayerInventory>();
         
         platformMaxX = plantCollider.bounds.max.x;
@@ -35,6 +39,11 @@ public class PlantWateringManager : MonoBehaviour
 
     private void Update()
     {
+        if (plantWateringStarted && firstGeneration)
+        {
+            generatePlants = true;
+            firstGeneration = false;
+        }
         if (generatePlants)
         {
             for (int i = 0; i < maxPlantCount; i++)
