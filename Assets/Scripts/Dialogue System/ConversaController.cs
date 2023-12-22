@@ -18,10 +18,7 @@ public class ConversaController : MonoBehaviour
 	{
 		runner = new ConversationRunner(conversation);
 		runner.OnConversationEvent.AddListener(HandleConversationEvent);
-		// Change to Interaction
-		// startDialogueButton.onClick.AddListener(HandleStartConversation);
-		// startDialogueButton.onClick.AddListener(uiController.Show);
-
+		
 		if (conversation.name == "Tutorial")
 		{
 			HandleStartConversation();
@@ -46,6 +43,9 @@ public class ConversaController : MonoBehaviour
 				break;
 			case UserEvent userEvent:
 				HandleUserEvent(userEvent);
+				break;
+			case FavorabilityEvent favorabilityEvent:
+				HandleFavorabilityEvent(favorabilityEvent);
 				break;
 			case EndEvent _:
 				HandleEnd();
@@ -77,6 +77,11 @@ public class ConversaController : MonoBehaviour
 	{
 		if (userEvent.Name == "Food bought")
 			Debug.Log("We can use this event to update the inventory, for instance");
+	}
+	private static void HandleFavorabilityEvent(FavorabilityEvent favorabilityEvent)
+	{
+		FavorabilityController favorabilityController = FindObjectOfType<FavorabilityController>();
+		favorabilityController.AddFavorability(favorabilityEvent.ActorName, favorabilityEvent.Favorability);
 	}
 
 	public void HandleStartConversation()

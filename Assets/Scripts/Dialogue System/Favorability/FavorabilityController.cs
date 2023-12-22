@@ -28,8 +28,4 @@ public class FavorabilityController : MonoBehaviour
     {
         _favorabilityDictionary[characterName] += favorability;
     }
-    public void RemoveFavorability(string characterName, float favorability)
-    {
-        _favorabilityDictionary[characterName] -= favorability;
-    }
 }
